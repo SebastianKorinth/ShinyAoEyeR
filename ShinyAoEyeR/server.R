@@ -21,7 +21,7 @@ server <- function(input, output) {
     plot(0:1,0:1, type='n',axes = F, ann=FALSE)
     rasterImage(background.image, 0, 0, 1, 1)
     rect(xleft = 0, xright = 1, ytop = 1, ybottom = 0, 
-         border = "black", lty= 1, lwd = 1)
+         border = "red", lty= 1, lwd = 1)
  
     for (aoi.counter in 1:nrow(values$aoi.table)){
 
