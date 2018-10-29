@@ -105,7 +105,10 @@ server <- function(input, output) {
 ###############################################################################    
 # saves the data frame upon botton press into a text file; aoi. index is added
 # and the data frame is cleared   
-    observeEvent(input$save.aoi.file, {
+    observeEvent(
+      input$save.aoi.file, 
+      {
+        # save txt for eyEdu
       values$aoi.table$aoi.index <- row.names(values$aoi.table)
       values$aoi.table$line.aoi.index <- NA
       values$aoi.table$line.number <- NA
@@ -115,12 +118,25 @@ server <- function(input, output) {
                   file = paste("aoiFiles/", file.name.var, sep = ""),
                   quote = F,
                   row.names = F)
+      
+      # save ias for eyeLink
+      for.eyelink <- values$aoi.table
+      for.eyelink$aoi.shape <- "RECTANGLE"
+      for.eyelink <- for.eyelink[,c("aoi.shape", "aoi.index", "x.left", "y.top", "x.right", "y.bottom", "aoi.label")]
+      file.name.var <- gsub(".png", ".ias",input$image.list)
+      write.table(for.eyelink,
+                  file = paste("aoiFiles/", file.name.var, sep = ""),
+                  quote = F,
+                  row.names = F,
+                  col.name = F)
+      # reset 
       values$aoi.table <- data.frame(x.left = numeric(),
                                      y.top = numeric(),
                                      x.right = numeric(),
                                      y.bottom = numeric(),
                                      aoi.label = character())
-    })
+    }
+    )
 
 ###############################################################################    
 # resets data frame upon botton press
