@@ -1,5 +1,5 @@
 # ShinyAoEyeR
-A Shiny app for drawing rectangular areas of interest (e.g., for eye tracking experiments)
+A Shiny app for drawing rectangular areas of interest (e.g., for eye tracking experiments). It creates *ias* and *txt* file AoIs for each image. These can be used for the EyeLink as well as EyeTribe (via https://github.com/SebastianKorinth/eyEdu) respectively.  
 
 ### Getting the app running ###
 1. After clicking the green “Clone or Download” button on the Github website, choose “Download ZIP”. 
