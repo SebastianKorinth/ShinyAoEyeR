@@ -30,7 +30,7 @@ library(png)
 
 #### Additional Settings ####
 - The file “global.R” contains an entry “scale.var” (line 15), which is set by default to 0.55. This means that the image in the Shiny app is decreased in size by the factor 0.55 compared to its original size. This decrease is likely necessary to present the complete image on the screen with no need to scroll a lot. To enlarge the image just set the “scale.var” to 1.0 (= original size) or higher and restart the app.
-- The default line color for AoIs is red. This can be changed in the “server.R” file at line 35. Here one might also change the line type (lty=2) or line width (lwd=3). In any case you will have to restart the app to make the changes visible. These settings do not affect the aoiFiles themselves but only how they appear in the app.  
+- The default line color for AoIs is red. This can be changed in the “server.R” file at line 32. Here one might also change the line type (lty=2) or line width (lwd=3). In any case you will have to restart the app to make the changes visible. These settings do not affect the aoiFiles themselves but only how they appear in the app.  
 - Shiny apps can be run inside RStudio or in any internet browser of your choice. This option can be set using the small dropdown arrow next to the “Run App” button in RStudio.
 
 
