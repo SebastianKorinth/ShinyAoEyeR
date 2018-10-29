@@ -5,8 +5,18 @@ A Shiny app for drawing rectangular areas of interest (e.g., for eye tracking ex
 1. After clicking the green “Clone or Download” button on the Github website, choose “Download ZIP”. 
 2. Extract the “ShinyAoEyeR” folder to a directory of your choice.
 3. The downloaded version contains already four example images in the “images” folder. You can use these images for test purposes, but you will probably want to replace them with your own images. Just make sure that the folder structure and the folder name are not changed.
-4. ShinyAoEyeR relies on two packages:  “shiny” and “png”. If they are not installed yet, you have to run: install.packages("shiny"); install.packages("png"). In any case they must be loaded  before you start running the app: library(shiny) and library(png). 
-5. Open one of the three files “global.R”, “server.R” or “ui.R” in RStudio and make sure that your working directory is set to the “ShinyAoEyeR” folder containing the “images” folder.
+4. ShinyAoEyeR relies on two packages:  “shiny” and “png”. You need to run the following, before you start running the app: 
+```r
+if (!require("shiny")) {
+  install.packages("shiny", dependencies = TRUE)
+}
+if (!require("png")) {
+  install.packages("png", dependencies = TRUE)
+}
+library(shiny)
+library(png)
+```
+5. Open one of the three files “global.R”, “server.R” or “ui.R” in RStudio.
 6. By pressing the button “Run App” in the RStudio environment, you finally open the app.
 
 ### How to use the app ###
