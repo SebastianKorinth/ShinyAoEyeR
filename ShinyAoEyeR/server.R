@@ -21,7 +21,7 @@ server <- function(input, output) {
     plot(0:1,0:1, type='n',axes = F, ann=FALSE)
     rasterImage(background.image, 0, 0, 1, 1)
     rect(xleft = 0, xright = 1, ytop = 1, ybottom = 0, 
-         border = "red", lty= 1, lwd = 1)
+         border = "black", lty= 1, lwd = 1)
  
     for (aoi.counter in 1:nrow(values$aoi.table)){
 
@@ -29,7 +29,7 @@ server <- function(input, output) {
             ytop =  (dim.y - values$aoi.table$y.top[aoi.counter])/dim.y, 
             xright =  values$aoi.table$x.right[aoi.counter]/dim.x,
             ybottom = (dim.y - values$aoi.table$y.bottom[aoi.counter])/dim.y,
-            border="black", lty=1,lwd=1)
+            border="red", lty=1,lwd=1)
     }
  
     }) 
