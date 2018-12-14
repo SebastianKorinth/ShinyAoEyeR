@@ -1,0 +1,2 @@
+x.left y.top x.right y.bottom aoi.label aoi.index line.aoi.index line.number image.name
+279 379 377 520 Shampoo 1 NA NA C_62INCON.png

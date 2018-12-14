@@ -1,0 +1,2 @@
+x.left y.top x.right y.bottom aoi.label aoi.index line.aoi.index line.number image.name
+627 438 750 568 Clock 1 NA NA C_43INCON.png
